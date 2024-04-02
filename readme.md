@@ -6,10 +6,10 @@ The Delaware River Basin was selected for this study due to its critical role as
 1. Create an 1km fishnet within Delaware River Basin  
 A 1 kilometer fishnet within Delaware River Basin is created for zonal statistical analysis and producing dataframe including all features later.
 2. LST  
-Land Surface Temperature 8-Day data derived from the Moderate-Resolution Imaging Spectroradiometer (MODIS) was downloaded from NASA (https://ladsweb.modaps.eosdis.nasa.gov/). The spatial resolution is 1 km. Areas where QC > 3 K were eliminated.LST in summer (June to August) of 2005,2010,2015and 2020 was synthesized to obtain the average LST in summer of these 4 years. 
-![alt text](image.png)
+Land Surface Temperature 8-Day data derived from the Moderate-Resolution Imaging Spectroradiometer (MODIS) was downloaded from NASA (https://ladsweb.modaps.eosdis.nasa.gov/). The spatial resolution is 1 km. Areas where QC > 3 K were eliminated.LST in summer (June to August) of 2005,2010,2015and 2020 was synthesized to obtain the average LST in summer of these 4 years.   
+![alt text](image.png)  
 3. Land Use Data  
-![alt text](image-1.png)
+![alt text](image-1.png)  
 The historical land use data is derived from National Land Cover Database from EROS (https://www.sciencebase.gov/catalog/item/6345b637d34e342aee0863aa). The 2010 land use data and predicted land use data under SSPs are from Dornbierer et al.(2021)[1] The original data is of 30-meter resolution. The data is transformed to projected coordinate and reclassified to 8 classes specified as table 1. Then, using the fishnet as feature zone input and land use data as feature class input to perform a tabulate area. The area of each land use class within grids of the fishnet is calculated and exported as a table. Since we mainly study urban area data, we remove places where Developed Low Intensity and Developed Med-High Intensity areas account for less than 40%. 
 
 <table align="center">
@@ -53,11 +53,11 @@ The historical land use data is derived from National Land Cover Database from E
 </tbody></table>
 
 4. Population data    
-![alt text](image-2.png)
+![alt text](image-2.png)  
 Historical population count data is from WorldPop (www.worldpop.org/). The predicted population count data under various Shared Socioeconomic Pathways (SSPs) published by Li et al.[2] is produced based on WorldPop data.
 With the raster images projected to the same projected coordinate as land use data, the images are then processed through zonal statistics as table tool using ArcGIS Pro. Result table shows the total population count within a grid.
 5. DEM data  
-3DEP DEM dataset is downloaded via Google Earth Engine (https://developers.google.com). It is reprojected and the average elevation of each grid is calculated through zonal statistics as a table.
+3DEP DEM dataset is downloaded via Google Earth Engine (https://developers.google.com). It is reprojected and the average elevation of each grid is calculated through zonal statistics as a table.  
 ![alt text](image-3.png)
 # Quick Start
 ```cmd
